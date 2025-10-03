@@ -14,6 +14,7 @@ $colors-netflix: (
   "netflixgrey": #808080,
   "netflixlightgrey": #afafaf,
   "netflixdarkgrey": #3c3c3c,
+  "netflixred": #dd0914,
 );
 
 $theme-colors: map-merge($theme-colors, $colors-netflix);

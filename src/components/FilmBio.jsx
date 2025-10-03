@@ -29,11 +29,13 @@ class FilmBio extends Component {
       <div className="p-2 z-2 bg-netflixbg w-100 d-flex flex-column justify-content-between border border-start-0 border-3 rounded">
         <div>
           <h5 style={{ width: "200px" }}>{this.state.film.Title}</h5>
+          <small>{this.state.film.Runtime}</small>
           <p>Year: {this.state.film.Year}</p>
           <p className="desc-cut">{this.state.film.Plot}</p>
+          <small>Actors: {this.state.film.Actors}</small>
         </div>
         <div className="d-flex justify-content-end">
-          <PlayCircleFill className="fs-2 me-3 " />
+          <PlayCircleFill className="fs-2 me-3 text-netflixred" />
         </div>
       </div>
     );

@@ -9,7 +9,6 @@ class FilmGallery extends Component {
   state = {
     films: [],
     loading: true,
-    selected: false,
   };
   filmLoad = async () => {
     this.setState({ loading: true });

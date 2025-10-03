@@ -1,4 +1,4 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Dropdown, Row } from "react-bootstrap";
 import avatar from "../assets/avatar.png";
 import { PencilSquare } from "react-bootstrap-icons";
 
@@ -21,51 +21,20 @@ function Profile() {
             <div className="up">
               <h3 className="text-bg-netflixgrey text-white p-2 ps-3 fs-5">Donny Dunk</h3>
               <h4 className="fs-5 fw-normal text-netflixlightgrey mt-4">Language:</h4>
-              <button
-                className="btn btn-dark btn-sm dropdown-toggle border-white border-radius-1 btn-fw-bold bg-netflixblack"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <span className="pe-3">English</span>
-              </button>
-              <ul className="dropdown-menu dropdown-menu-dark">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Italian
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Mandarin Chinese
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    French
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    German
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Russian
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Ukrainian
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Japanese
-                  </a>
-                </li>
-              </ul>
+              <Dropdown className="d-inline-block align-middle ">
+                <Dropdown.Toggle variant="dark" className="btn-sm border-white border-radius-1 btn-fw-bold bg-netflixblack" id="dropdown-basic">
+                  English
+                </Dropdown.Toggle>
+                <Dropdown.Menu menuVariant="dark">
+                  <Dropdown.Item href="#/action-1">Italian</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Mandarin Chinese</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">French</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">German</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Russian</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Ukrainian</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Japanese</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
             <hr />
             <div className="center">

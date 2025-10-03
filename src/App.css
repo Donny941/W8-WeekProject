@@ -22,3 +22,10 @@ a {
 .btn-bg {
   background-color: #e3e3e3;
 }
+.desc-cut {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  white-space: normal;
+}

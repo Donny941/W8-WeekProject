@@ -20,10 +20,10 @@ class FilmGallery extends Component {
         this.setState({ films: data.Search });
         console.log(data);
       } else {
-        console.log("error");
+        throw new Error("Film not Found!");
       }
-    } catch (e) {
-      console.log(e);
+    } catch (Error) {
+      console.log(Error);
     } finally {
       this.setState({ loading: false });
     }

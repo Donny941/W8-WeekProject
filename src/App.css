@@ -1,0 +1,24 @@
+.pointer {
+  cursor: pointer;
+}
+.btn-fw-bold {
+  font-weight: 600 !important;
+}
+.tracking-wider {
+  letter-spacing: 0.3rem;
+}
+.top-25 {
+  top: 25% !important;
+}
+.shadow-icon {
+  box-shadow: 5px 4px 12px black;
+}
+a {
+  display: block;
+  color: #0077ff !;
+  text-decoration: none;
+  font-size: small;
+}
+.btn-bg {
+  background-color: #e3e3e3;
+}

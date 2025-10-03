@@ -1,12 +1,18 @@
 import { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Spinner } from "react-bootstrap";
 import Slider from "react-slick";
+import { PlayCircleFill } from "react-bootstrap-icons";
+import FilmBio from "./FilmBio";
+import SingleFilm from "./SingleFilm";
 
 class FilmGallery extends Component {
   state = {
     films: [],
+    loading: true,
+    selected: false,
   };
   filmLoad = async () => {
+    this.setState({ loading: true });
     try {
       const response = await fetch(`http://www.omdbapi.com/?s=${this.props.listFilms}&apikey=608961b1`);
       if (response.ok) {
@@ -18,6 +24,8 @@ class FilmGallery extends Component {
       }
     } catch (e) {
       console.log(e);
+    } finally {
+      this.setState({ loading: false });
     }
   };
   componentDidMount() {
@@ -36,11 +44,10 @@ class FilmGallery extends Component {
       <Container className="mt-4">
         <h3 className="mb-3">{this.props.galleryTitle}</h3>
         <div className="slider-container">
+          {this.state.loading && <Spinner animation="grow" variant="danger" />}
           <Slider {...settings}>
             {this.state.films.map((film) => (
-              <div key={film.imdbID}>
-                <img src={film.Poster} alt="film" style={{ width: "95%", height: "300px", aspectRatio: "1/1", objectFit: "cover", margin: "0 8px" }} />
-              </div>
+              <SingleFilm key={film.imdbID} film={film} />
             ))}
 
             {/* <div>

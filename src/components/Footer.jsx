@@ -3,20 +3,20 @@ import { Facebook, Instagram, TwitterX, Youtube } from "react-bootstrap-icons";
 
 function Footer() {
   return (
-    <div className="mt-7">
+    <div className="mt-6 pb-5">
       <div className="footContain text-netflixgrey mx-md-5 mx-lg-6 mx-xl-7 mx-xxl-8">
         <div className="social d-flex gap-3">
           <a className="text-netflixgrey" target="_blank" href="https://www.facebook.com/netflix/">
-            <Facebook />
+            <Facebook className="fs-2" />
           </a>
           <a className="text-netflixgrey" target="_blank" href="https://www.instagram.com/netflix/">
-            <Instagram />
+            <Instagram className="fs-2" />
           </a>
           <a className="text-netflixgrey" target="_blank" href="https://x.com/netflix/">
-            <TwitterX />
+            <TwitterX className="fs-2" />
           </a>
           <a className="text-netflixgrey" target="_blank" href="https://www.youtube.com/channel/UCWOA1ZGywLbqmigxE4Qlvuw">
-            <Youtube />
+            <Youtube className="fs-2" />
           </a>
         </div>
         <div className="row mt-3 fs-8">

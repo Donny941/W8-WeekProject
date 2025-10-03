@@ -1,8 +1,7 @@
 import { Component } from "react";
 import { Container, Spinner } from "react-bootstrap";
 import Slider from "react-slick";
-import { PlayCircleFill } from "react-bootstrap-icons";
-import FilmBio from "./FilmBio";
+
 import SingleFilm from "./SingleFilm";
 
 class FilmGallery extends Component {
